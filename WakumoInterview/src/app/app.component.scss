@@ -1,0 +1,37 @@
+.avatar{
+    text-align: center;
+    border-radius: 50%;
+    background-color: #17a2b8;
+    width: 35px;
+    height: 35px;
+}
+
+.initials{
+    position: relative;
+    top: 4.75px;
+    font-size: 14px;
+    line-height: 17.5px;
+    color: #fff;
+    text-align: center;
+}
+
+.app{
+    //border: 1px solid #111111;
+}
+
+.content{
+    border-radius: 5px;
+    padding: 7px;
+}
+
+.bg-color-disable{
+    background-color: #f5f5f5;
+    color: #666666 !important;
+
+}
+
+.bg-color-active{
+    background-color: #88a0e2;
+    color: #fff !important;
+
+}

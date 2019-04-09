@@ -1,0 +1,24 @@
+<div class="container app">
+  <ng-container *ngFor="let item of listMessage; let i = index">
+    <div class="d-flex align-self-center"  *ngIf="isShowShortenedName(listMessage, i)" [class.flex-row-reverse]="item?.sender?.username == employeeName">
+      <div class="avatar mt-3">
+        <span class="initials">
+          {{ item?.sender?.username | shortenedName }}
+        </span>
+      </div>
+      <div class="d-flex mt-3 align-self-center">
+        <div class="ml-2 font-weight-bold" [class.mr-2]="item?.sender?.username == employeeName"  [class.ml-2]="item?.sender?.username !== employeeName">
+          {{ item?.sender?.username }}
+        </div>
+      </div>
+    </div>
+    <div class="mt-2 d-flex" [class.flex-row-reverse]="item?.sender?.username == employeeName">
+      <span class="content" [class.bg-color-disable]="item?.sender?.username == employeeName" [class.bg-color-active]="item?.sender?.username !== employeeName">
+        {{ item?.content }}
+      </span>
+    </div>
+    <div class="d-flex"*ngIf="isShowCreatedDate(listMessage, i)" [class.flex-row-reverse]="item?.sender?.username == employeeName">
+      <span> {{ item?.created_at | dateTimeFormat }}</span>
+    </div>
+  </ng-container>
+</div>
